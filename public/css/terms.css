@@ -1,0 +1,81 @@
+.docs {
+	font-family: HeeboLight;
+	font-size: calc((100vw - 768px) * 10 / 1032 + 8px); /* 18 -> 8 @1800 -> 768*/
+	line-height: calc((100vw - 768px) * 15 / 1032 + 13px); /* 28 -> 15 @1800 -> 768*/
+	color: #5b5e58;
+	text-align: justify;
+}
+.docs-row {
+	padding-top: calc((100vw - 768px) * 99 / 1032 + 81px); /* 180 -> 81 @1800 -> 768*/
+}
+.docs .ps-title {
+	margin-bottom: calc((100vw - 768px) * 4 / 1032 + 4px); /* 8 -> 4 @1800 -> 768*/
+}
+.docs-date{
+	margin-bottom: calc((100vw - 768px) * 27 / 1032 + 23px); /* 50 -> 23 @1800 -> 768*/
+}
+.docs-focus {
+	font-size: calc((100vw - 768px) * 10 / 1032 + 8px); /* 18 -> 8 @1800 -> 768*/
+	color: #ffffff;
+	background-color: #0b364e;
+	padding: calc((100vw - 768px) * 4 / 1032 + 4px) calc((100vw - 768px) * 16 / 1032 + 14px); /* 8->4 30->14 @1800 -> 768*/
+}
+.docs-subhead {
+	font-family: HeeboMedium;
+	color: #0b364e;
+	margin-top: calc((100vw - 768px) * 11 / 1032 + 25px); /* 35 -> 25 @1800 -> 768*/
+	margin-bottom: calc((100vw - 768px) * 6 / 1032 + 14px); /* 20 -> 14 @1800 -> 768*/
+}
+.docs-subhead2 {
+	font-family: HeeboRegular;
+	text-decoration: underline;
+}
+.docs p {
+	row-gap: calc((100vw - 768px) * 14 / 1032 + 9px); /* 25 -> 11 @1800 -> 768*/
+}
+.docs ul, .docs ol {
+	margin-bottom: calc((100vw - 768px) * 22 / 1032 + 18px); /* 40 -> 18 @1800 -> 768*/
+}
+.docs li{
+	margin-bottom: calc((100vw - 768px) * 14 / 1032 + 9px); /* 25 -> 11 @1800 -> 768*/
+}
+
+/* list '-' */
+ul.hyphen {
+	list-style-type: '-  ';
+}
+
+/*###### RESPONSIVE ######*/
+
+@media only screen and (max-width: 768px) {
+	.docs {
+		font-size: calc((100vw - 425px) * 2 / 343 + 9px); /* 11 -> 9 @768 -> 425*/
+		line-height: calc((100vw - 425px) * 3 / 343 + 14px); /* 17 -> 14 @768 -> 425*/
+	}
+	.docs-row {
+		padding-top: calc((100vw - 425px) * 38 / 343 + 70px); /* 108 -> 70 @768 -> 425*/
+	}
+	.docs .ps-title {
+		margin-bottom: calc((100vw - 425px) * 2 / 343 + 3); /* 2 -> 3 @768 -> 425*/
+	}
+	.docs-date{
+		margin-bottom: calc((100vw - 425px) * 6 / 343 + 24px); /* 30 -> 24 @768 -> 425*/
+	}
+	.docs-focus {
+		font-size: calc((100vw - 425px) * 2 / 343 + 9px); /* 11 -> 9 @768 -> 425*/
+		padding: calc((100vw - 425px) * 1 / 343 + 4px) calc((100vw - 425px) * 4 / 343 + 14px); /* 5->4 18->14 @768 -> 425*/
+	}
+	.docs-subhead {
+		margin-top: calc((100vw - 425px) * 4 / 343 + 21px); /* 21 -> 17 @768 -> 425*/
+		margin-bottom: calc((100vw - 425px) * 2 / 343 + 10px); /* 12 -> 10 @768 -> 425*/
+	}
+	.docs p {
+		row-gap: calc((100vw - 425px) * 3 / 343 + 12px); /* 15 -> 12 @768 -> 425*/
+	}
+	.docs ul, .docs ol {
+		margin-bottom: calc((100vw - 425px) * 5 / 343 + 19px); /* 24 -> 19 @768 -> 425*/
+	}
+	.docs li{
+		margin-bottom: calc((100vw - 425px) * 3 / 343 + 12px); /* 15 -> 12 @768 -> 425*/
+	}
+}

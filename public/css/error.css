@@ -1,0 +1,48 @@
+.fr-msg {
+	min-height: calc((100vw - 768px) * 32 / 1032 + 26px); /* 58 -> 26 @1800 -> 768*/
+}
+.fr-msg > div {
+	width: 100%;
+	padding: calc((100vw - 768px) * 8 / 1032 + 7px) calc((100vw - 768px) * 16 / 1032 + 14px); /* 15->7 30->14 @1800 -> 768*/
+}
+.fr-msg p, .acc-msg li {
+	font-family: HeeboRegular;
+}
+.fr-err {
+	background-color: #f8e5e3;	
+}
+.fr-err p, .fr-err li {
+	color: #d35243;
+}
+.fr-ok {
+	background-color: #e6f1dc;
+}
+.fr-ok p {
+	color: #6e9026;
+}
+.fr-remind {
+	background-color: #fde6de;
+}
+.fr-remind p {
+	color: #f15a22;
+}
+.fr-msg *:last-of-type {
+    margin-bottom: 0;
+}
+.fr-msg li {
+	margin-bottom: calc((100vw - 768px) * 1 / 1032 + 4px); /* 8 -> 4 @1800 -> 768*/
+}
+
+/*###### RESPONSIVE ######*/
+
+@media only screen and (max-width: 768px) {
+	.fr-msg {
+		min-height: calc((100vw - 425px) * 7 / 343 + 28px); /* 35 -> 28 @768 -> 425*/
+	}
+	.fr-msg > div {
+		padding: calc((100vw - 425px) * 7 / 343 + 9px) calc((100vw - 425px) * 4 / 343 + 14px); /* 10->9 18->14 @768 -> 425*/
+	}
+	.fr-msg li {
+		margin-bottom: calc((100vw - 425px) * 1 / 343 + 4px); /* 5 -> 4 @768 -> 425*/
+	}
+}

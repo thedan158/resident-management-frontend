@@ -1,0 +1,80 @@
+.popup {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(200,209,216,0.7
+						  );
+	padding: calc((100vw - 768px) * 27 / 1032 + 23px); /* 50 -> 23 @1800 -> 768*/
+	overflow: hidden;
+	z-index: 999;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s;
+}
+.popup:target {
+    visibility: visible; 
+    opacity: 1; 
+    pointer-events: auto;
+}
+.pu-content {
+	width: calc((100vw - 768px) * 550 / 1032 + 450px); /* 1000 -> 450 @1800 -> 768*/
+	background-color: #ffffff;
+	padding: calc((100vw - 768px) * 27 / 1032 + 23px); /* 50 -> 23 @1800 -> 768*/
+	position: relative;
+}
+
+/*close*/
+.pu-close {
+	position: absolute;
+	right: calc((100vw - 768px) * 8 / 1032 + 7px); /* 15 -> 7 @1800 -> 768*/
+	top: calc((100vw - 768px) * 7 / 1032 + 6px); /* 13 -> 6 @1800 -> 768*/
+	cursor: pointer;
+}
+.pu-close::after {
+	content: "\e90e";
+	font-family: aenicon;
+	font-size: calc((100vw - 768px) * 10 / 1032 + 8px); /* 18 -> 8 @1800 -> 768*/
+	color: #0b364e;
+	vertical-align: super;
+}
+/*scrollbar*/
+
+  .popup *::-webkit-scrollbar {
+    width: calc((100vw - 768px) * 13 / 1032 + 26px); /* 39 -> 26 @1800 -> 768*/
+    
+  }
+  .popup *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .popup *::-webkit-scrollbar-thumb {
+    background-color: #e6e5e5;
+    border-radius: 50px;
+    border: calc((100vw - 768px) * 5 / 1032 + 10px) solid #f2f2f2; /* 15 -> 10 @1800 -> 768*/
+  }
+
+/*###### RESPONSIVE ######*/
+
+@media only screen and (max-width: 768px) {
+	.popup {
+		padding: calc((100vw - 425px) * 22 / 343 + 28px); /* 50 -> 28 @768 -> 425*/
+	}
+	.pu-content {
+		width: 80%;
+		padding: calc((100vw - 425px) * 22 / 343 + 28px); /* 50 -> 28 @768 -> 425*/
+		overflow-y: auto;
+	}
+	/*close*/
+	.pu-close {
+		right: calc((100vw - 425px) * 7 / 343 + 8px); /* 15 -> 8 @768 -> 425*/
+		top: calc((100vw - 425px) * 6 / 343 + 8px); /* 14 -> 8 @768 -> 425*/
+	}
+	.pu-close::after {
+		font-size: calc((100vw - 425px) * 7 / 343 + 9px); /* 16 -> 9 @768 -> 425*/
+	}
+}

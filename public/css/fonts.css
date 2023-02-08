@@ -1,0 +1,34 @@
+* {
+	letter-spacing: 0.005em;
+}
+a {
+	color: #3bb9cb;
+	text-decoration: none;
+}
+a.button:hover, a:hover {
+	text-decoration:none;
+}
+p {
+	margin-top: 0px;
+	word-wrap: normal;
+}
+p:last-child {
+	margin-bottom: 0px;
+}
+p a {
+	color: #4fc0d0;
+}
+p a:hover {
+	text-decoration: underline;	
+}
+
+/*position*/
+.center {
+	text-align: center;
+}
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}

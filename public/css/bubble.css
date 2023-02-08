@@ -1,0 +1,44 @@
+.fo-bub {
+	position: relative;
+}
+.fo-bub:hover::after {
+	content: '';
+	width: calc((100vw - 768px) * 209 / 1032 + 171px); /* 380 -> 171 @1800 -> 768*/
+	min-width: calc((100vw - 768px) * 110 / 1032 + 90px); /* 200 -> 90 @1800 -> 768*/
+	position: absolute;
+	top: 120%;
+	font-family: 'HeeboLight';
+	font-size: calc((100vw - 768px) * 9 / 1032 + 7px); /* 16 -> 7 @1800 -> 768*/
+	line-height: calc((100vw - 768px) * 14 / 1032 + 12px); /* 26 -> 12 @1800 -> 768*/
+	color: #e4e8ec;
+	background-color: #519bb3;
+	border-radius: calc((100vw - 768px) * 11 / 1032 + 9px); /* 20->9 @1800 -> 768*/
+	box-shadow: 1px 2px 5px 1px rgba(26,26,31,0.15);
+	padding: calc((100vw - 768px) * 8 / 1032 + 7px) calc((100vw - 768px) * 11 / 1032 + 9px); /* 15->7 20->9 @1800 -> 768*/
+	z-index: 50;
+}
+.fo-bub:hover::before {
+	content: '';
+	width: 15px;
+	height: 10px;
+	position: absolute;
+	top: 103%;
+	background-color: #519bb3;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+
+/*###### RESPONSIVE ######*/
+
+@media only screen and (max-width: 768px) {
+
+	.fo-bub:hover::after {
+		width: calc((100vw - 425px) * 46 / 343 + 182px); /* 228 -> 182 @768 -> 425*/
+		min-width: calc((100vw - 425px) * 24 / 343 + 96px); /* 120 -> 96 @768 -> 425*/
+		font-size: calc((100vw - 425px) * 2 / 343 + 8px); /* 10 -> 8 @768 -> 425*/
+		line-height: calc((100vw - 425px) * 3 / 343 + 13px); /* 16 -> 13 @768 -> 425*/
+		border-radius: calc((100vw - 425px) * 2 / 343 + 10px); /* 12 -> 10 @768 -> 425*/ 
+		padding: calc((100vw - 425px) * 2 / 343 + 7px) calc((100vw - 425px) * 2 / 343 + 10px); /* 9->7 20->10 @768 -> 425*/
+	}
+
+}
